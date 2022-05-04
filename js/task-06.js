@@ -8,11 +8,11 @@ input.addEventListener("blur", function(){
          this.classList.remove("invalid");
       }
       this.classList.add("valid");
-   }else {
-      if(this.classList.contains("valid")){
-         this.classList.remove("valid");
-      }
-      this.classList.add("invalid");
+      return false;
    }
-   console.dir(dataLength);
+
+   if(this.classList.contains("valid")){
+      this.classList.remove("valid");
+   }
+   this.classList.add("invalid");
 });
